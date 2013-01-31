@@ -66,7 +66,13 @@ if (!class_exists('wp_bs')) {
             add_action('init', array(&$this, 'i18n'));
 
             //
-            // 5. Run the plugin!
+            // 5. Load Bootstrap files
+            //
+            add_action('wp_enqueue_scripts', array(&$this, 'load_bootstrap'));
+
+
+            //
+            // 6. Run the plugin!
             //
             add_action('plugins_loaded', array(&$this, 'start'));
         }
@@ -167,7 +173,16 @@ if (!class_exists('wp_bs')) {
          */
         public function i18n()
         {
-            load_plugin_textdomain('wp-bs', false, basename(dirname(__FILE)) . '/lang/');
+            load_plugin_textdomain('wp-bs', false, basename(dirname(__FILE__)) . '/lang/');
+        }
+
+        /**
+         * Load Bootstrap files
+         */
+        public function load_bootstrap()
+        {
+            wp_enqueue_script('bs-core', BS_URLPATH . 'client/js/bootstrap.min.js', array('jquery'));
+            wp_enqueue_style('bs-core', BS_URLPATH . 'client/css/bootstrap.min.css');
         }
 
         /**
