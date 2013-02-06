@@ -133,7 +133,7 @@ if (!class_exists('wp_bs')) {
             if (is_admin()) {
             }
             // Front-End Site
-
+            require_once('shortcodes/sc.php');
         }
 
         /**
