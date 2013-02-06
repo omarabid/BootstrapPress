@@ -6,7 +6,7 @@
 add_shortcode('bs_hero_unit', 'bs_hero_unit');
 function bs_hero_unit($atts, $content)
 {
-    return '<div class="hero-unit twitter_bs">' . do_shortcode($content) . '</div>';
+    return '<div class="twitter_bs hero-unit">' . do_shortcode($content) . '</div>';
 }
 
 //
@@ -15,7 +15,7 @@ function bs_hero_unit($atts, $content)
 add_shortcode('bs_page_header', 'bs_page_header');
 function bs_page_header($atts, $content)
 {
-    return '<div class="page-header twitter_bs">' . do_shortcode($content) . '</div>';
+    return '<div class="twitter_bs page-header">' . do_shortcode($content) . '</div>';
 }
 
 //
@@ -24,6 +24,7 @@ function bs_page_header($atts, $content)
 add_shortcode('bs_well', 'bs_well');
 function bs_well($atts, $content)
 {
+    $size = '';
     extract(shortcode_atts(array(
         'size' => '' // large|small
     ), $atts));
@@ -95,19 +96,19 @@ function bs_p($atts, $content)
 add_shortcode('bs_small', 'bs_small');
 function bs_small($atts, $content)
 {
-    return '<small>' . do_shortcode($content) . '</small>';
+    return '<small class="twitter_bs">' . do_shortcode($content) . '</small>';
 }
 
 add_shortcode('bs_bold', 'bs_bold');
 function bs_bold($atts, $content)
 {
-    return '<strong>' . do_shortcode($content) . '</strong>';
+    return '<strong class="twitter_bs">' . do_shortcode($content) . '</strong>';
 }
 
 add_shortcode('bs_italic', 'bs_italic');
 function bs_italic($atts, $content)
 {
-    return '<em>' . do_shortcode($content) . '</em>';
+    return '<em class="twitter_bs">' . do_shortcode($content) . '</em>';
 }
 
 //
@@ -122,7 +123,7 @@ function bs_abbr($atts, $content)
     // Extracting attributes
     extract(shortcode_atts(array(
         'title' => '', // {User input}
-        'type' => '' // initialism
+        'type' => '' // null, initialism
     ), $atts));
     return '<abbr class="twitter_bs ' . $type . '" title ="' . $title . '">' . do_shortcode($content) . '</abbr>';
 }
