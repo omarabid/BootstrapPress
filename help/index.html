@@ -308,7 +308,9 @@
 </div>
 
 <h4>Badges</h4>
-<h5>Usage</h5>
+
+<div>
+    <h5>Usage</h5>
 <pre class="prettyprint">
     [bs_badge_default]Default[/bs_badge_default]
     [bs_badge_success]Success[/bs_badge_success]
@@ -317,7 +319,7 @@
     [bs_badge_info]Info[/bs_badge_info]
     [bs_badge_inverse]Inverse[/bs_badge_inverse]
 </pre>
-<h5>Output</h5>
+    <h5>Output</h5>
 <pre class="prettyprint">
     &lt;span class="twitter_bs badge"&gt;Default&lt;span&gt;
     &lt;span class="twitter_bs badge badge-success"&gt;Success&lt;span&gt;
@@ -326,13 +328,26 @@
     &lt;span class="twitter_bs badge badge-info"&gt;Info&lt;span&gt;
     &lt;span class="twitter_bs badge badge-inverse"&gt;Inverse&lt;span&gt;
 </pre>
-<div></div>
-</section>
-<div class="page-header">
-    <h3>Forms</h3>
 </div>
-<section id="forms">
+<h4>Buttons</h4>
 
+<div>
+    <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_button href="#" type="" size="" state=""]Button Text[/bs_button]
+</pre>
+    <h6>Attributes</h6>
+    <ul>
+        <li><strong>href</strong> User input</li>
+        <li><strong>type</strong> null, primary, info, success, warning, danger, inverse, link</li>
+        <li><strong>size</strong> null, large, small, mini</li>
+        <li><strong>state</strong> null, disabled</li>
+    </ul>
+    <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;a href="#" class="twitter_bs btn"&gt;Button Text&lt;/a&gt;
+</pre>
+</div>
 </section>
 <div class="page-header">
     <h3>Tables</h3>
