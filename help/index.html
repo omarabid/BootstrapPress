@@ -353,7 +353,159 @@
     <h3>Tables</h3>
 </div>
 <section id="tables">
+    <h4>Table Element</h4>
 
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_table strip="" border="" highlight="" size=""]
+        ... Table content here
+    [/bs_table]
+</pre>
+        <h6>Attributes</h6>
+        <ul>
+            <li><strong>Strip</strong> null, striped</li>
+            <li><strong>Border</strong> null, bordered</li>
+            <li><strong>Highlight</strong> null, hover</li>
+            <li><strong>Size</strong> null, condensed</li>
+        </ul>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;table class="twitter_bs table"&gt;
+        ... Table content here
+    &lt;/table&gt;
+</pre>
+    </div>
+    <h4>Table Header</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_head]
+        ... Table header content
+    [/bs_head]
+</pre>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;thead class="twitter_bs"&gt;
+        ... Table header content
+    &lt;/thead&gt;
+</pre>
+    </div>
+    <h4>Table Body</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_head]
+        ... Table body content
+    [/bs_head]
+</pre>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;tbody class="twitter_bs"&gt;
+        ... Table body content
+    &lt;/tbody&gt;
+</pre>
+    </div>
+    <h4>Table Row</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_row type=""]
+        ... Row content here
+    [/bs_row]
+</pre>
+        <h6>Attributes</h6>
+        <ul>
+            <li><strong>Type</strong> null, success, error, warning, info</li>
+        </ul>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;tr class="twitter_bs"&gt;
+        ... Row content here
+    &lt;/tr&gt;
+</pre>
+    </div>
+    <h4>Table Cell</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_cell]
+       ... Cell content here
+    [/bs_cell]
+</pre>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;td class="twitter_bs"&gt;
+        ... Table content here
+    &lt;/td&gt;
+</pre>
+    </div>
+    <h4>Overall</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_table]
+        [bs_head]
+            [bs_row]
+                [bs_cell]First Name[/bs_cell]
+                [bs_cell]Last Name[/bs_cell]
+                [bs_cell]User Name[/bs_cell]
+            [bs_row]
+        [/bs_head]
+        [bs_body]
+            [bs_row]
+                [bs_cell]Mark[/bs_cell]
+                [bs_cell]Otto[/bs_cell]
+                [bs_cell]@mdo[/bs_cell]
+            [/bs_row]
+            [bs_row]
+                [bs_cell]Jacob[/bs_cell]
+                [bs_cell]Thornton[/bs_cell]
+                [bs_cell]@fat[/bs_cell]
+            [/bs_row]
+            [bs_row]
+                [bs_cell]Larry[/bs_cell]
+                [bs_cell]The Bird[/bs_cell]
+                [bs_cell]@twitter[/bs_cell]
+            [/bs_row]
+        [/bs_body]
+    [/bs_table]
+</pre>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;table class="twitter_bs table    "&gt;
+        &lt;thead&gt;&lt;br /&gt;
+        &lt;tr class=""&gt;&lt;/tr&gt;&lt;br /&gt;
+        &lt;td&gt;First Name&lt;/td&gt;&lt;br /&gt;
+        &lt;td&gt;Last Name&lt;/td&gt;&lt;br /&gt;
+        &lt;td&gt;User Name&lt;/td&gt;&lt;br /&gt;
+        &lt;tr class=""&gt;&lt;/tr&gt;&lt;br /&gt;
+        &lt;/thead&gt;&lt;br /&gt;
+        &lt;tbody&gt;&lt;br /&gt;
+        &lt;tr class=""&gt;&lt;br /&gt;
+            &lt;td&gt;Mark&lt;/td&gt;&lt;br /&gt;
+            &lt;td&gt;Otto&lt;/td&gt;&lt;br /&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;&lt;br /&gt;
+        &lt;/tr&gt;&lt;br /&gt;
+        &lt;tr class=""&gt;&lt;br /&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;&lt;br /&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;&lt;br /&gt;
+            &lt;td&gt;@fat&lt;/td&gt;&lt;br /&gt;
+        &lt;/tr&gt;&lt;br /&gt;
+        &lt;tr class=""&gt;&lt;br /&gt;
+            &lt;td&gt;Larry&lt;/td&gt;&lt;br /&gt;
+            &lt;td&gt;The Bird&lt;/td&gt;&lt;br /&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;&lt;br /&gt;
+        &lt;/tr&gt;&lt;br /&gt;
+        &lt;/tbody&gt;&lt;br /&gt;
+    &lt;/table&gt;
+</pre>
+    </div>
 </section>
 <div class="page-header">
     <h3>Grid</h3>
