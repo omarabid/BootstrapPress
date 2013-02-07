@@ -240,3 +240,30 @@ function bs_badge_inverse($atts, $content)
 {
     return '<span class="twitter_bs badge badge-inverse">' . do_shortcode($content) . '</span>';
 }
+
+//
+// Buttons
+//
+add_shortcode('bs_button', 'bs_button');
+function bs_button($atts, $content)
+{
+    // Defining Vars
+    $link = '';
+    $type = '';
+    $size = '';
+    $state = '';
+    // Extracting attributes
+    extract(shortcode_atts(array(
+        'link' => '#', // User input
+        'type' => '', // null, primary, info, success, warning, danger, inverse, link
+        'size' => '', // null, large, small, mini
+        'state' => '', // null, disabled
+    ), $atts));
+    if ($type) {
+        $type = 'btn-' . $type;
+    }
+    if ($size) {
+        $size = 'btn-' . $size;
+    }
+    return '<a href="' . $link . '" class="twitter_bs btn ' . $type . ' ' . $size . ' ' . $state . '">' . $content . '</a>';
+}
