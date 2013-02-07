@@ -6,9 +6,6 @@
 // Load Typography Shortcodes
 require_once('typography.php');
 
-// Load Form Shortcodes
-require_once('forms.php');
-
 // Load Grid Shortcodes
 require_once('grid.php');
 
