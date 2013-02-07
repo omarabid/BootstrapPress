@@ -45,7 +45,6 @@
         <li><a href="#pro_version">Pro Version</a></li>
         <li class="nav-header">Shortcodes</li>
         <li><a href="#typography">Typography</a></li>
-        <li><a href="#forms">Forms</a></li>
         <li><a href="#tables">Tables</a></li>
         <li><a href="#grid">Grid</a></li>
         <li><a href="#components">Components</a></li>
@@ -511,7 +510,49 @@
     <h3>Grid</h3>
 </div>
 <section id="grid">
+    <h4>Grid Container</h4>
 
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_grid display=""]
+        ... Grid content here
+    [/bs_grid]
+</pre>
+        <h6>Attributes</h6>
+        <ul>
+            <li><strong>Display</strong> null, fluid</li>
+        </ul>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;div class="twitter_bs row"&gt;
+        ... Grid content here
+    &lt;/div&gt;
+</pre>
+    </div>
+    <h4>Grid Column</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_column size=""]
+        ... Column content here
+    [/bs_column]
+</pre>
+        <h6>Attributes</h6>
+        <ul>
+            <li><strong>Size</strong> 1 to 12</li>
+        </ul>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;div class="twitter_bs span8"&gt;
+        ... Column content here
+    &lt;/div&gt;
+    &lt;div class="twitter_bs span4"&gt;
+        ... Column content here
+    &lt;/div&gt;
+</pre>
+    </div>
 </section>
 <div class="page-header">
     <h3>Components</h3>
