@@ -181,8 +181,9 @@ if (!class_exists('wp_bs')) {
          */
         public function load_bootstrap()
         {
-            wp_enqueue_script('bs-core', BS_URLPATH . 'client/js/bootstrap.min.js', array('jquery'));
-            wp_enqueue_style('bs-core', BS_URLPATH . 'client/css/bootstrap.min.css');
+            wp_enqueue_script('bs-core', BS_URLPATH . 'client/js/bootstrap.js', array('jquery'));
+            wp_enqueue_style('bs-core', BS_URLPATH . 'client/css/bootstrap.css');
+            wp_enqueue_style('bs-reset', BS_URLPATH . 'client/css/reset.css');
         }
 
         /**
