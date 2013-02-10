@@ -15,6 +15,7 @@
   Author URI: http://omarabid.com
   Version: 0.0.2
   Text Domain: wp-bs
+  License: GPLv3
  */
 
 if (!class_exists('wp_bs')) {
