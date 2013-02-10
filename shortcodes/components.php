@@ -105,7 +105,7 @@ function bs_accordion($atts, $content)
     extract(shortcode_atts(array(
         'id' => '' // User input
     ), $atts));
-    return '<div class="accordion">' . do_shortcode($content) . '</div>';
+    return '<div class="twitter_bs accordion">' . do_shortcode($content) . '</div>';
 }
 
 add_shortcode('bs_accordion_tab', 'bs_accordion_tab');
