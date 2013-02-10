@@ -183,7 +183,6 @@ if (!class_exists('wp_bs')) {
         {
             wp_enqueue_script('bs-core', BS_URLPATH . 'client/js/bootstrap.js', array('jquery'));
             wp_enqueue_style('bs-core', BS_URLPATH . 'client/css/bootstrap.css');
-            wp_enqueue_style('bs-reset', BS_URLPATH . 'client/css/reset.css');
         }
 
         /**
