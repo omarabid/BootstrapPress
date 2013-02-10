@@ -9,7 +9,7 @@
  */
 /*
   Plugin Name: BootstrapPress
-  Plugin URI: http://bootstrappress.com
+  Plugin URI: http://costartpress.com
   Description: BootstrapPress gives you the Twitter Bootstrap framework styles in WordPress.
   Author: Abid Omar
   Author URI: http://omarabid.com
