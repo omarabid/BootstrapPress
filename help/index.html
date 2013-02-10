@@ -558,7 +558,132 @@
     <h3>Components</h3>
 </div>
 <section id="components">
+    <h4>Tabs</h4>
 
+    <div>
+        <p>
+            Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.
+        </p>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_tabs]
+        [bs_tab title="Home" id="home"]
+            My Home content
+        [/bs_tab]
+        [bs_tab title="Profile" id="profile" active="true"]
+            My Profile content
+        [/bs_tab]
+        [bs_tab title="Messages" id="messages"]
+            My Messages content
+        [/bs_tab]
+    [/bs_tabs]
+</pre>
+        <h6>Attributes</h6>
+        <ul>
+            <li><strong>Title</strong> User Input</li>
+            <li><strong>Id</strong> User Input</li>
+            <li><strong>Active</strong> null, true</li>
+        </ul>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;ul class="twitter_bs nav nav-tabs" id=""&gt;&lt;br&gt;
+        &lt;li class=""&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;br&gt;
+        &lt;li class="active"&gt;&lt;a href="#profile" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;&lt;br&gt;
+        &lt;li class=""&gt;&lt;a href="#messages" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;&lt;br&gt;
+    &lt;/ul&gt;
+    &lt;div class="twitter_bs tab-content"&gt;&lt;br&gt;
+        &lt;div class="tab-pane " id="home"&gt;&lt;br&gt;
+            My Home content&lt;br&gt;
+        &lt;/div&gt;&lt;br&gt;
+        &lt;div class="tab-pane active" id="profile"&gt;&lt;br&gt;
+            My Profile content&lt;br&gt;
+        &lt;/div&gt;&lt;br&gt;
+        &lt;div class="tab-pane " id="messages"&gt;&lt;br&gt;
+            My Messages content&lt;br&gt;
+        &lt;/div&gt;&lt;br&gt;
+    &lt;/div&gt;
+</pre>
+    </div>
+    <h4>Tooltip</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_tooltip tooltip="Tooltip content" placement="left"]Tooltip Link[/bs_tooltip]
+</pre>
+        <h6>Attributes</h6>
+        <ul>
+            <li><strong>Placement</strong> null, top, bottom, left, right</li>
+            <li><strong>Tooltip</strong> User Input</li>
+        </ul>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;a href="#" class="twitter_bs bs_tooltip" data-placement="left" data-original-title="Tooltip content"&gt;Tooltip Link&lt;/a&gt;
+</pre>
+    </div>
+    <h4>PopOver</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_popover tooltip="Popover content" placement="left"]Popover Link[/bs_popover]
+</pre>
+        <h6>Attributes</h6>
+        <ul>
+            <li><strong>Placement</strong> null, top, bottom, left, right</li>
+            <li><strong>Tooltip</strong> User Input</li>
+        </ul>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;a href="#" class="twitter_bs bs_popover" data-placement="left" data-original-title="Popover content"&gt;Popover Link&lt;/a&gt;
+</pre>
+    </div>
+    <h4>Accordion</h4>
+
+    <div>
+        <h5>Usage</h5>
+<pre class="prettyprint">
+    [bs_accordion id=""]
+        [bs_accordion_tab title="Collapsible Item 1"]
+            HTML/ShortCode Content for tab 1 here
+        [/bs_accordion_tab]
+        [bs_accordion_tab title="Collapsible Item 2" active="true"]
+            HTML/ShortCode Content for tab 2 here
+        [/bs_accordion_tab]
+    [/bs_accordion]
+</pre>
+        <h6>Attributes</h6>
+        <ul>
+            <li><strong>Id</strong> User Input</li>
+            <li><strong>Title</strong> User Input</li>
+            <li><strong>Active</strong> null, true</li>
+        </ul>
+        <h5>Output</h5>
+<pre class="prettyprint">
+    &lt;div class="twitter_bs accordion"&gt;
+        &lt;div class="accordion-group"&gt;
+            &lt;div class="accordion-heading"&gt;
+                &lt;a class="accordion-toggle" data-toggle="collapse" href="#zg1m2FM6NY"&gt;Collapsible Item 1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="accordion-body collapse " id="zg1m2FM6NY"&gt;
+                &lt;div class="accordion-inner"&gt;
+                    HTML/ShortCode Content for tab 1 here
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="accordion-group"&gt;
+            &lt;div class="accordion-heading"&gt;
+                &lt;a class="accordion-toggle" data-toggle="collapse" href="#RzmHs2jbLv"&gt;Collapsible Item 2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="accordion-body collapse in" id="RzmHs2jbLv"&gt;
+                &lt;div class="accordion-inner"&gt;
+                    HTML/ShortCode Content for tab 2 here
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+    </div>
 </section>
 <h2>About Us
     <small>The people behind Bootstrap Press</small>
