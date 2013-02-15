@@ -1,7 +1,7 @@
 === BootstraPress ===
 Contributors: omarabid
 Donate link: http://omarabid.com/
-Tags: twitter bootstrap, bootstrap, shortcodes, shortcode, styles
+Tags: twitter bootstrap, bootstrap, shortcodes, shortcode, styles, widget, Post, plugin, posts, twitter, images, page, links, Bootstrap CSS, CSS, normalize, reset, Twitter Bootstrap Javascript, WordPress Admin, WordPress Bootstrap, YUI
 Requires at least: 3.5.0
 Tested up to: 3.5.1
 Stable tag: 0.0.2
@@ -12,9 +12,9 @@ Bootstrap Press offers Twitter Bootstrap styles with WordPress Shortcodes. It ma
 
 == Description ==
 
-Bootstrap Press offers Twitter Bootstrap styles with WordPress Shortcodes. The aim is to make adding elements such as Tabs, Grid, Buttons...) to your WordPress blog as simple as possible.
+[BootstrapPress](http://costartpress.com) offers Twitter Bootstrap styles with WordPress Shortcodes. The aim is to make adding elements such as Tabs, Grid, Buttons...) to your WordPress blog as simple as possible.
 
-Bootstrap Press support the following styles
+BootstrapPress support the following styles
 
 = Typography =
 
