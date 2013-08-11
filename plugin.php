@@ -4,7 +4,7 @@
  * BootstrapPress - Twitter Bootstrap for WordPress
  *
  * @author Abid Omar
- * @version 0.0.4
+ * @version 0.0.5
  * @package Main
  */
 /*
@@ -13,7 +13,7 @@
   Description: BootstrapPress gives you the Twitter Bootstrap framework styles in WordPress.
   Author: Abid Omar
   Author URI: http://omarabid.com
-  Version: 0.0.4
+  Version: 0.0.5
   Text Domain: wp-bs
   License: GPLv3
  */
@@ -36,7 +36,7 @@ if (!class_exists('wp_bs')) {
          * Plug-in Version
          * @var string
          */
-        public $version = "0.0.4";
+        public $version = "0.0.5";
 
         /**
          * Minimal WordPress version required

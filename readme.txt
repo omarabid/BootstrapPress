@@ -4,7 +4,7 @@ Donate link: http://omarabid.com/
 Tags: twitter bootstrap, bootstrap, shortcodes, shortcode, styles, widget, Post, plugin, posts, twitter, admin, twitter, image,  responsive, button, buttons, carousel, slider, tabs, icons, theme, css, simple, editor, layout, template, design, table, tables, style, custom, javascript, jquery
 Requires at least: 3.5.0
 Tested up to: 3.5.1
-Stable tag: 0.0.4
+Stable tag: 0.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/quick-guide-gplv3.html
 
@@ -56,7 +56,8 @@ BootstrapPress support the following styles
 
 == Changelog ==
 
-=
+= 0.0.5 =
+* Fixed Button href bug
 
 = 0.0.4 =
 * Updated Bootstrap version to 2.3.2

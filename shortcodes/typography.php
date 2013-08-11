@@ -248,13 +248,13 @@ add_shortcode('bs_button', 'bs_button');
 function bs_button($atts, $content)
 {
     // Defining Vars
-    $link = '';
+    $href = '';
     $type = '';
     $size = '';
     $state = '';
     // Extracting attributes
     extract(shortcode_atts(array(
-        'link' => '#', // User input
+        'href' => '#', // User input
         'type' => '', // null, primary, info, success, warning, danger, inverse, link
         'size' => '', // null, large, small, mini
         'state' => '', // null, disabled
@@ -265,5 +265,5 @@ function bs_button($atts, $content)
     if ($size) {
         $size = 'btn-' . $size;
     }
-    return '<a href="' . $link . '" class="twitter_bs btn ' . $type . ' ' . $size . ' ' . $state . '">' . $content . '</a>';
+    return '<a href="' . $href . '" class="twitter_bs btn ' . $type . ' ' . $size . ' ' . $state . '">' . $content . '</a>';
 }

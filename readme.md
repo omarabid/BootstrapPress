@@ -55,6 +55,12 @@ Join our [mailing list](http://costartpress.com) to get notified when the premiu
 
 # Changelog
 
+### 0.0.5
+* Fixed Button href bug
+
+### 0.0.4
+* Updated Bootstrap version to 2.3.2
+
 ### 0.0.3
 * Usage Code
 
