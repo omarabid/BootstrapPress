@@ -4,7 +4,7 @@
  * BootstrapPress - Twitter Bootstrap for WordPress
  *
  * @author Abid Omar
- * @version 0.0.2
+ * @version 0.0.4
  * @package Main
  */
 /*
@@ -13,10 +13,15 @@
   Description: BootstrapPress gives you the Twitter Bootstrap framework styles in WordPress.
   Author: Abid Omar
   Author URI: http://omarabid.com
-  Version: 0.0.2
+  Version: 0.0.4
   Text Domain: wp-bs
   License: GPLv3
  */
+
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 if (!class_exists('wp_bs')) {
     /**
@@ -31,7 +36,7 @@ if (!class_exists('wp_bs')) {
          * Plug-in Version
          * @var string
          */
-        public $version = "0.0.2";
+        public $version = "0.0.4";
 
         /**
          * Minimal WordPress version required
@@ -76,6 +81,11 @@ if (!class_exists('wp_bs')) {
             // 6. Run the plugin!
             //
             add_action('plugins_loaded', array(&$this, 'start'));
+
+            //
+            // 7. Tracking code
+            //
+            add_action('admin_init', array(&$this, 'tracking'));
         }
 
         /**
@@ -194,7 +204,69 @@ if (!class_exists('wp_bs')) {
 
         }
 
+        /**
+         * Usage tracking code
+         */
+        public function tracking()
+        {
+            // PressTrends Account API Key
+            $api_key = 'c1le7evp66kcn23g12rn9px0iuwchgysu13j';
+            $auth = 'dtxpccsysdngfkh6oztlj2aoehvdb23gi';
+
+            // Start of Metrics
+            global $wpdb;
+            $data = get_transient('presstrends_cache_data');
+            if (!$data || $data == '') {
+                $api_base = 'http://api.presstrends.io/index.php/api/pluginsites/update/auth/';
+                $url = $api_base . $auth . '/api/' . $api_key . '/';
+
+                $count_posts = wp_count_posts();
+                $count_pages = wp_count_posts('page');
+                $comments_count = wp_count_comments();
+
+                // wp_get_theme was introduced in 3.4, for compatibility with older versions, let's do a workaround for now.
+                if (function_exists('wp_get_theme')) {
+                    $theme_data = wp_get_theme();
+                    $theme_name = urlencode($theme_data->Name);
+                } else {
+                    $theme_data = get_theme_data(get_stylesheet_directory() . '/style.css');
+                    $theme_name = $theme_data['Name'];
+                }
+
+                $plugin_name = '&';
+                foreach (get_plugins() as $plugin_info) {
+                    $plugin_name .= $plugin_info['Name'] . '&';
+                }
+                // CHANGE __FILE__ PATH IF LOCATED OUTSIDE MAIN PLUGIN FILE
+                $plugin_data = get_plugin_data(__FILE__);
+                $posts_with_comments = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='post' AND comment_count > 0");
+                $data = array(
+                    'url' => stripslashes(str_replace(array('http://', '/', ':'), '', site_url())),
+                    'posts' => $count_posts->publish,
+                    'pages' => $count_pages->publish,
+                    'comments' => $comments_count->total_comments,
+                    'approved' => $comments_count->approved,
+                    'spam' => $comments_count->spam,
+                    'pingbacks' => $wpdb->get_var("SELECT COUNT(comment_ID) FROM $wpdb->comments WHERE comment_type = 'pingback'"),
+                    'post_conversion' => ($count_posts->publish > 0 && $posts_with_comments > 0) ? number_format(($posts_with_comments / $count_posts->publish) * 100, 0, '.', '') : 0,
+                    'theme_version' => $plugin_data['Version'],
+                    'theme_name' => $theme_name,
+                    'site_name' => str_replace(' ', '', get_bloginfo('name')),
+                    'plugins' => count(get_option('active_plugins')),
+                    'plugin' => urlencode($plugin_name),
+                    'wpversion' => get_bloginfo('version'),
+                );
+
+                foreach ($data as $k => $v) {
+                    $url .= $k . '/' . $v . '/';
+                }
+                wp_remote_get($url);
+                set_transient('presstrends_cache_data', $data, 60 * 60 * 24);
+            }
+        }
+
     }
 }
 
+// Initialize a new instance of the class
 $wp_bs = new wp_bs();

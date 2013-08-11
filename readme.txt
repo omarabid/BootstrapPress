@@ -1,10 +1,10 @@
-=== BootstraPress ===
+=== BootstrapPress ===
 Contributors: omarabid
 Donate link: http://omarabid.com/
-Tags: twitter bootstrap, bootstrap, shortcodes, shortcode, styles, widget, Post, plugin, posts, twitter, images, page, links, Bootstrap CSS, CSS, normalize, reset, Twitter Bootstrap Javascript, WordPress Admin, WordPress Bootstrap, YUI
+Tags: twitter bootstrap, bootstrap, shortcodes, shortcode, styles, widget, Post, plugin, posts, twitter, admin, twitter, image,  responsive, button, buttons, carousel, slider, tabs, icons, theme, css, simple, editor, layout, template, design, table, tables, style, custom, javascript, jquery
 Requires at least: 3.5.0
 Tested up to: 3.5.1
-Stable tag: 0.0.2
+Stable tag: 0.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/quick-guide-gplv3.html
 
@@ -55,6 +55,14 @@ BootstrapPress support the following styles
 3. Open 'index.html' in the 'help' folder. Read the documentation for the shortcodes you want to use.
 
 == Changelog ==
+
+=
+
+= 0.0.4 =
+* Updated Bootstrap version to 2.3.2
+
+= 0.0.3 =
+* Usage Code
 
 = 0.0.2 =
 * Initial Release
